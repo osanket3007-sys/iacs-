@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IACS · Analytics</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">I</div>
+      <div class="brand-text">
+        <div class="brand-title">IACS</div>
+        <div class="brand-sub">Intelligent Energy Control</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="nav-item" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+        Dashboard
+      </a>
+      <a class="nav-item" href="battery.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 10v4"/><path d="M6 10v4"/></svg>
+        Battery
+      </a>
+      <a class="nav-item" href="charging.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        Charging
+      </a>
+      <a class="nav-item" href="energy.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 3 13l4-4"/><path d="M3 13h13"/><path d="M17 7l4 4-4 4"/><path d="M21 11H8"/></svg>
+        Energy Flow
+      </a>
+      <a class="nav-item active" href="analytics.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10"/><path d="M12 19V5"/><path d="M20 19v-7"/><path d="M2 19h20"/></svg>
+        Analytics
+      </a>
+      <a class="nav-item" href="system.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.04-1.56V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1.04 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.56 1.04H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1.04z"/></svg>
+        System
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="status-dot"></div>
+      <div class="sidebar-footer-text">
+        <div class="sidebar-footer-title">System Online</div>
+        <div class="sidebar-footer-sub">Simulation Mode</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <div class="crumb">IACS / <span>Analytics</span></div>
+        <div class="page-title">System Analytics</div>
+      </div>
+      <div class="live-badge">
+        <span class="live-pill">LIVE</span>
+        <span data-clock>00:00:00</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="page-header">
+        <div class="eyebrow">Performance Data</div>
+        <h1 class="page-heading">Analytics</h1>
+        <p class="page-sub">Review charging and energy performance over the current session.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-label">Power History</div>
+        <div class="card-title">Power Consumption</div>
+        <div class="chart-wrap">
+          <canvas data-power-chart></canvas>
+        </div>
+        <div class="stat-strip">
+          <div class="stat">
+            <div class="stat-label">Total Energy</div>
+            <div class="stat-value">18.42<span class="unit">kWh</span></div>
+            <span class="stat-note">Today</span>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Average Power</div>
+            <div class="stat-value">287<span class="unit">W</span></div>
+            <span class="stat-note">Daily average</span>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Charging Time</div>
+            <div class="stat-value">4h 32m</div>
+            <span class="stat-note">Active charging</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-3" style="margin-top:20px;">
+        <div class="card">
+          <div class="card-label">Efficiency</div>
+          <div class="card-title" style="font-size:16px;">Charge Cycles</div>
+          <div class="info-list">
+            <div class="info-row"><span class="info-row-label">Completed today</span><span class="info-row-value">3</span></div>
+            <div class="info-row"><span class="info-row-label">Avg. cycle time</span><span class="info-row-value">1h 51m</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-label">Thermal</div>
+          <div class="card-title" style="font-size:16px;">Temperature Range</div>
+          <div class="info-list">
+            <div class="info-row"><span class="info-row-label">Peak</span><span class="info-row-value">38.1 °C</span></div>
+            <div class="info-row"><span class="info-row-label">Minimum</span><span class="info-row-value">24.6 °C</span></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-label">Battery</div>
+          <div class="card-title" style="font-size:16px;">SOC Progress</div>
+          <div class="info-list">
+            <div class="info-row"><span class="info-row-label">Start of day</span><span class="info-row-value">31 %</span></div>
+            <div class="info-row"><span class="info-row-label">Current</span><span class="info-row-value" data-live-soc>62</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

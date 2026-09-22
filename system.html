@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IACS · System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">I</div>
+      <div class="brand-text">
+        <div class="brand-title">IACS</div>
+        <div class="brand-sub">Intelligent Energy Control</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a class="nav-item" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg>
+        Dashboard
+      </a>
+      <a class="nav-item" href="battery.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 10v4"/><path d="M6 10v4"/></svg>
+        Battery
+      </a>
+      <a class="nav-item" href="charging.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
+        Charging
+      </a>
+      <a class="nav-item" href="energy.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 3 13l4-4"/><path d="M3 13h13"/><path d="M17 7l4 4-4 4"/><path d="M21 11H8"/></svg>
+        Energy Flow
+      </a>
+      <a class="nav-item" href="analytics.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10"/><path d="M12 19V5"/><path d="M20 19v-7"/><path d="M2 19h20"/></svg>
+        Analytics
+      </a>
+      <a class="nav-item active" href="system.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.04 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 9 19.4a1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.04H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1.04-1.56V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1.04 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.56 1.04H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1.04z"/></svg>
+        System
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="status-dot"></div>
+      <div class="sidebar-footer-text">
+        <div class="sidebar-footer-title">System Online</div>
+        <div class="sidebar-footer-sub">Simulation Mode</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <div class="crumb">IACS / <span>System</span></div>
+        <div class="page-title">System Information</div>
+      </div>
+      <div class="live-badge">
+        <span class="live-pill">LIVE</span>
+        <span data-clock>00:00:00</span>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="page-header">
+        <div class="eyebrow">Hardware &amp; Configuration</div>
+        <h1 class="page-heading">System</h1>
+        <p class="page-sub">Controller, protection hardware, and sensing elements that make up the IACS prototype, along with mode and firmware details.</p>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <div class="card-label">Main Controller</div>
+          <div class="card-title">ESP32</div>
+          <div class="info-list">
+            <div class="info-row"><span class="info-row-label">Role</span><span class="info-row-value">Sensing &amp; control</span></div>
+            <div class="info-row"><span class="info-row-label">Setpoint interface</span><span class="info-row-value">DAC → Buck Converter</span></div>
+            <div class="info-row"><span class="info-row-label">Firmware</span><span class="info-row-value">v0.9.2</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-label">Protection</div>
+          <div class="card-title">BMS &amp; Relay</div>
+          <div class="info-list">
+            <div class="info-row"><span class="info-row-label">Battery Management System</span><span class="info-row-value" style="color:var(--accent);">Active</span></div>
+            <div class="info-row"><span class="info-row-label">Isolation relay</span><span class="info-row-value" style="color:var(--accent);">Armed</span></div>
+            <div class="info-row"><span class="info-row-label">Hardware fault</span><span class="info-row-value">None</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-2" style="margin-top:20px;">
+        <div class="card">
+          <div class="card-label">Sensing Elements</div>
+          <div class="card-title">Connected Sensors</div>
+          <div class="info-list">
+            <div class="info-row"><span class="info-row-label">Voltage sensor</span><span class="info-row-value">Online</span></div>
+            <div class="info-row"><span class="info-row-label">Current sensor</span><span class="info-row-value">Online</span></div>
+            <div class="info-row"><span class="info-row-label">Temperature sensor</span><span class="info-row-value">Online</span></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title-row">
+            <div>
+              <div class="card-label">Operating Mode</div>
+              <div class="card-title">Data Source</div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" data-sim-switch checked>
+              <span class="switch-track"></span>
+            </label>
+          </div>
+          <p class="page-sub" style="font-size:13.5px;"><span data-sim-switch-label style="font-weight:600; color:var(--text-1);">Simulation Mode</span> — all readings on this dashboard are generated for demonstration and are not from live hardware.</p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:20px;">
+        <div class="card-label">Project</div>
+        <div class="card-title">Intelligent Adaptive Charging System</div>
+        <p class="page-sub" style="font-size:13.5px;">A closed-loop EV charging prototype that adapts the charging-voltage setpoint from real-time battery voltage, current, temperature, and state of charge, developed at the Department of Electrical Engineering, Sanjivani College of Engineering.</p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
